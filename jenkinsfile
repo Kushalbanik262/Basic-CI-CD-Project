@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage("Permission to GradleW"){
+            steps{
+                echo "Giving Permission"
+                sh 'chmod +x gradlew'
+            }
+        }
         stage('Clean') {
             steps {
                 echo 'Cleaning Project..'
